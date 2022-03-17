@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    white-space: nowrap;
+    width: 100%;
+    min-width: 785px;
+    height: 65px;
+    background-color: rgb(56, 4, 60);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+tr:hover {
+    background-color: rgb(198,33,117);
+}
+
+table,
+tr,
+th,
+td {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    table-layout: fixed;
+    border: 1px solid rgb(198,33,117);
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(56, 4, 60);
+}
+
+input {
+    display: block;
+}
+
+select{
+    display: block;
+}
+
+.hdiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+.glavnidiv
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
