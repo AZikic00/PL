@@ -379,6 +379,15 @@ async function crtajKolo(sezona,glavniKontejner){
     var kontejnerTabela = document.createElement("div");
     kontejner.appendChild(kontejnerTabela);
 
+    var max = 1;
+    let resultUtakmice = await fetch("https://localhost:5001/Sezona/Sve_utakmice/" + sezona);
+    let utakmice = await resultUtakmice.json();
+    utakmice.forEach(utakmica => {
+        if (max < utakmica.kolo)
+        {
+            max=utakmica.kolo;
+        }
+    })
 
     let sel= document.createElement("select");
     let labela = document.createElement("label");
@@ -407,9 +416,9 @@ async function crtajKolo(sezona,glavniKontejner){
         tr2.appendChild(th2);
     })
     table.appendChild(tr2);
+    table.style.marginTop = "5px";
 
-    sel.value=38;
-    fetch("https://localhost:5001/Sezona/Pogledaj_kolo/" + sezona + "/"+ sel.value)
+    fetch("https://localhost:5001/Sezona/Pogledaj_kolo/" + sezona + "/"+ max)
     .then(p=>{
         p.json().then(utakmice=>{
             utakmice.forEach(utakmica=>{
@@ -441,7 +450,7 @@ async function crtajKolo(sezona,glavniKontejner){
 
     var kontejnerForma = document.createElement("div");
     kontejner.appendChild(kontejnerForma);
-    kontejnerForma.style.paddingTop = "35px";
+    kontejnerForma.style.paddingTop = "40px";
     kontejnerForma.style.paddingLeft = "10px";
 
     let result = await fetch("https://localhost:5001/Klub/Svi_klubovi/" + sezona);
@@ -514,6 +523,7 @@ async function crtajKolo(sezona,glavniKontejner){
     const dugme = document.createElement("button");
     dugme.innerHTML="Dodaj mec";
     kontejnerForma.appendChild(dugme);
+    dugme.style.marginTop = "5px";
 
     dugme.onclick=(ev)=>{
         const myArray = kontejner.querySelector(".sudija").value.split(" ");
