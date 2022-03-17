@@ -521,7 +521,7 @@ async function crtajKolo(sezona,glavniKontejner){
     })
 
     const dugme = document.createElement("button");
-    dugme.innerHTML="Dodaj mec";
+    dugme.innerHTML="Dodaj utakmicu";
     kontejnerForma.appendChild(dugme);
     dugme.style.marginTop = "5px";
 
