@@ -10,7 +10,7 @@ header{
     font-weight: bold;
     white-space: nowrap;
     width: 100%;
-    min-width: 785px;
+    min-width: 800px;
     height: 65px;
     background-color: rgb(56, 4, 60);
     display: flex;
