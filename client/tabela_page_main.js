@@ -222,7 +222,7 @@ async function crtajTabelu(sezona,glavniKontejner){
     trofej.width = "212";
     kontejner.appendChild(trofej);
     
-    trofej.style.paddingLeft = "50px";
+    trofej.style.marginLeft = "50px";
 }
 
 async function crtajStrelce(sezona,glavniKontejner){
@@ -294,7 +294,7 @@ async function crtajStrelce(sezona,glavniKontejner){
     trofej.width = "200";
     kontejner.appendChild(trofej);
     
-    trofej.style.paddingLeft = "50px";
+    trofej.style.marginLeft = "50px";
 }
 
 async function crtajAsistente(sezona,glavniKontejner){
@@ -365,7 +365,7 @@ async function crtajAsistente(sezona,glavniKontejner){
     trofej.width = "200";
     kontejner.appendChild(trofej);
     
-    trofej.style.paddingLeft = "50px";
+    trofej.style.marginLeft = "50px";
 }
 
 async function crtajKolo(sezona,glavniKontejner){
@@ -401,7 +401,7 @@ async function crtajKolo(sezona,glavniKontejner){
         opcija.value=i;
         sel.appendChild(opcija);
     }
-
+    sel.selectedIndex = max-1;
 
 
     var table = document.createElement("table");

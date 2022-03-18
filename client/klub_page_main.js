@@ -50,7 +50,7 @@ function CrtajHeader(klub,glavniKontejner)
     grb.width = "50";
     grb.style.position = "relative";
     grb.style.top="7px";
-    grb.style.paddingLeft = "15px";
+    grb.style.marginLeft = "15px";
     kontejner.appendChild(grb);
     kontejner.style.paddingRight = "10px";
 }
@@ -186,9 +186,7 @@ function CrtajIgrace(klub,sezona,glavniKontejner)
 async function crtajUtakmice(klub,sezona,glavniKontejner){
     var kontejner = document.createElement("div");
     glavniKontejner.appendChild(kontejner);
-    kontejner.style.paddingTop = "5px";
-    kontejner.style.paddingRight = "5px";
-    kontejner.style.paddingLeft = "5px";
+    kontejner.style.padding = "5px";
 
     var table = document.createElement("table");
     kontejner.appendChild(table);
